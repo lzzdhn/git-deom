@@ -55,15 +55,116 @@
             position: absolute;
             width: 90%;
             height: 1px;
-            background-color: #333;
+            background-color: #fff;
             top: 0;
+           
         }
         .user-info .login-register a{
             flex: auto;
             text-decoration: none;
             text-align: center;
             color: #fff;
+
         }
+        .menu .menu-inner{
+            list-style: none;
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            left: 0;
+            background-color: black;
+
+        }
+        /* .menu:active .menu-inner{
+            display: block;
+        } */
+        .menu .menu-inner a{
+            display: flex;
+            text-decoration: none;
+            color: #fff;
+            align-items: center;
+            justify-content: space-between;
+           font-size: 24px;
+            padding: 20px 40px;
+        }
+        .menu .menu-inner::before{
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+           
+        }
+        @media (min-width:880px){   
+            .menu i,.user-info i{
+                display: none;
+            }
+            .top-bar .user-info .login-register{
+                display: flex;
+            }
+            .top-bar .menu .menu-inner{
+                display: flex;
+                position: static;
+                width: auto;
+                background-color: black;
+            }
+            .menu .menu-inner a{
+                display: block;
+                font-weight: bold;
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+            }
+            .user-info .login-register{
+                position: static;
+                height: auto;
+                width: auto;
+                font-size: 14px;
+                font-weight: bold;
+                justify-content: center;
+                align-items: center;
+             }
+             .user-info .login-register a:hover{
+                color: #ff6700;
+             }
+             .top-bar{
+                justify-content: space-around;
+            }
+             .top-bar .menu .menu-inner {
+                display: flex;
+                position: static;
+                width: auto;
+                background-color: black;
+             }
+             .menu .menu-inner a{
+                display: block;
+                font-size: 14px;
+                margin: 0;
+                padding: 0;
+             }
+             .menu .menu-inner a:hover{
+                color: #ff6700;
+             }
+             .top-bar .space{
+                display: none;
+             }
+             .top-bar .menu{
+                order: 2;
+             }
+             .top-bar .user-info{
+                order: 3;
+             }
+             .top-bar .menu a,
+            .top-bar .user-info a{
+                margin: 0 10px;
+            }
+            }
     </style>
 </head>
 <body>
@@ -85,85 +186,85 @@
         </div>
         <div class="menu">
             <i class="fa-solid fa-bars"></i>
-            <ul class="mwun-inner
-            ">
+            <ul class="menu-inner">
                 <li>
                     <a href="#">
                         <span>小米官网</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>小米商城</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>小米影像</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>MIUI</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>loT</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>云服务</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>天星数科</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>有品</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>小爱开发平台</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>企业团购</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <span>Location</span>
-                        <i class="fa-solid fa-angle-fight"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </li>
             </ul>
         </div>
     </header>
-    <!-- <script>
-        const dl=document.querySelector('.login-register');
-        const user=document.querySelector('.user-info').addEventListener('click',()=>{
-            dl.style.display='block'
-            // console.log('点击了');
-        })
+    <script>
+        const menu=document.querySelector('.menu')
+        const menuEL=menu.querySelector('.menu-inner')
         
+        console.log(menuEL);
+        menu.addEventListener("click",() => {
+            menuEL.style.display="block"
+        })        
        
-    </script> -->
+    </script>
 </body>
 </html>
