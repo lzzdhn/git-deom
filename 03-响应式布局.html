@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./案例1/css/all.css">
+    <title>响应式布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .top-bar{
+            position: relative;
+            display: flex;
+            height: 60px;
+            background-color: black;
+            color: white;
+            align-items: center;
+            padding: 0 40px;
+
+        }
+        .top-bar h1{
+            height: 34px;
+        }
+        .top-bar h1 a svg{
+            width: 34px;
+            height: 34px;
+        }
+        .top-bar .space{
+            flex: auto;
+        }
+        .top-bar .user-info{
+            margin-right: 40px;
+        }
+     
+        .user-info .login-register{
+            
+            display: none;
+            justify-content: center;
+            align-items: center;
+             min-height: 60px;
+            position: absolute;
+            width: 100%;
+            background-color: #000;
+            left: 0;
+            top: 60px;
+        }
+        .user-info:active .login-register{
+            display: flex;
+        }
+        .user-info .login-register::before{
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 1px;
+            background-color: #333;
+            top: 0;
+        }
+        .user-info .login-register a{
+            flex: auto;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-bar">
+        <h1>
+            <a href="#">
+                    <svg data-v-777bda80="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 808 808" class="mi-logo"><g data-v-777bda80=""><path data-v-777bda80="" fill="#ff6900" d="M723.79,84.42C647.55,8.48,537.94,0,404,0,269.89,0,160.12,8.58,83.92,84.72S0,270.43,0,404.39,7.74,648,84,724.14,269.9,808,404,808s243.85-7.71,320-83.86,84-185.78,84-319.75C808,270.25,800.16,160.54,723.79,84.42Z"></path> <path data-v-777bda80="" fill="#fff" d="M374.26,553.72a5,5,0,0,1-5.06,5H300.3a5.05,5.05,0,0,1-5.12-5V373.53a5.05,5.05,0,0,1,5.12-5h68.9a5,5,0,0,1,5.06,5Z"></path> <path data-v-777bda80="" fill="#fff" d="M509.18,553.72a5.05,5.05,0,0,1-5.09,5H438.5a5,5,0,0,1-5.1-5V398.26c-.07-27.15-1.62-55-15.64-69.06-12-12.09-34.51-14.86-57.88-15.44H241a5,5,0,0,0-5.07,5v235a5.07,5.07,0,0,1-5.12,5H165.16a5,5,0,0,1-5.06-5V254.31a5,5,0,0,1,5.06-5H354.52c49.49,0,101.22,2.26,126.74,27.81s27.92,77.3,27.92,126.85Z"></path> <path data-v-777bda80="" fill="#fff" d="M644.29,553.72a5.06,5.06,0,0,1-5.09,5H573.57a5,5,0,0,1-5.08-5V254.31a5,5,0,0,1,5.08-5H639.2a5.06,5.06,0,0,1,5.09,5Z"></path></g></svg>
+            </a>
+        </h1>
+        <div class="space"></div>
+        <div class="user-info">
+            <i class="fa-solid fa-user"></i>
+            <!-- 创建一个隐藏层 -->
+            <div class="login-register">
+                <a href="#">登录</a>
+                <span class="line">|</span>
+                <a href="#">注册</a>
+            </div>
+        </div>
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+            <ul class="mwun-inner
+            ">
+                <li>
+                    <a href="#">
+                        <span>小米官网</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>小米商城</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>小米影像</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>MIUI</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>loT</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>云服务</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>天星数科</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>有品</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>小爱开发平台</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>企业团购</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Location</span>
+                        <i class="fa-solid fa-angle-fight"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- <script>
+        const dl=document.querySelector('.login-register');
+        const user=document.querySelector('.user-info').addEventListener('click',()=>{
+            dl.style.display='block'
+            // console.log('点击了');
+        })
+        
+       
+    </script> -->
+</body>
+</html>
